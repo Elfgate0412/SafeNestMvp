@@ -1,8 +1,13 @@
 import SectionTitle from "@/components/SectionTitle";
 import { mockListings } from "@/lib/mock/listings";
+import type { PageProps } from "next";
 
-export default function ListingDetail({ params }: { params: { id: string } }) {
-  const listing = mockListings.find(l => String(l.id) === params.id);
+export default async function ListingDetail(
+  { params }: PageProps<{ id: string }>
+) {
+  const { id } = await params;
+
+  const listing = mockListings.find(l => String(l.id) === id);
   if (!listing) return <div>Not found</div>;
 
   return (
