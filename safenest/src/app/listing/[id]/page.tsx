@@ -1,11 +1,11 @@
 import SectionTitle from "@/components/SectionTitle";
 import { mockListings } from "@/lib/mock/listings";
-import type { PageProps } from "next";
 
+// ✅ Next 15: params is a Promise
 export default async function ListingDetail(
-  { params }: PageProps<{ id: string }>
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params;
+  const { id } = await params; // <-- await it
 
   const listing = mockListings.find(l => String(l.id) === id);
   if (!listing) return <div>Not found</div>;
