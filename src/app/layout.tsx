@@ -1,13 +1,10 @@
+// app/layout.tsx (keep as-is)
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { theme } from "@/styles/mui-theme";
 import Navbar from "@/components/Navbar";
-
-export const metadata = {
-  title: "SafeNest MVP",
-  description: "Homestays for international students",
-};
+export const metadata = { title: "SafeNest MVP", description: "Homestays for international students" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

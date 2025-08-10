@@ -1,27 +1,12 @@
-"use client";
+// styles/mui-theme.ts
 import { createTheme } from "@mui/material/styles";
-
 export const theme = createTheme({
   palette: {
-    mode: "light",
-    primary: { main: "#111827" },   // gray-900-ish
-    secondary: { main: "#2563eb" }, // blue-600-ish
+    primary: { main: "#43B929", light: "#87E752" },  // brand green
+    secondary:{ main: "#FF37A6" },                   // accent pink
+    success:  { main: "#5CF64A" },
+    divider:  "#F1DEDE",
+    background: { default:"#ffffff", paper:"#F7FAF8" }
   },
-  shape: { borderRadius: 12 },
-  typography: {
-    fontFamily: [
-      "Inter",
-      "ui-sans-serif",
-      "system-ui",
-      "-apple-system",
-      "Segoe UI",
-      "Roboto",
-      "Noto Sans",
-      "Ubuntu",
-      "Cantarell",
-      "Helvetica Neue",
-      "Arial",
-      "sans-serif",
-    ].join(","),
-  },
+  shape: { borderRadius: 12 }
 });
