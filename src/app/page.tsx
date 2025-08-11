@@ -48,6 +48,21 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div className="grid gap-3 sm:grid-cols-3">
+        <a href="/host/register" className="rounded-xl border bg-white p-4 text-center hover:shadow-soft transition">
+          <div className="font-semibold">Become a host</div>
+          <div className="text-sm text-gray-600">Apply to host; upload documents</div>
+        </a>
+        <a href="/host/dashboard" className="rounded-xl border bg-white p-4 text-center hover:shadow-soft transition">
+          <div className="font-semibold">I’m a host</div>
+          <div className="text-sm text-gray-600">Dashboard, listings, status</div>
+        </a>
+        <a href="/student/dashboard" className="rounded-xl border bg-white p-4 text-center hover:shadow-soft transition">
+          <div className="font-semibold">I’m a student</div>
+          <div className="text-sm text-gray-600">(Placeholder) Student dashboard</div>
+        </a>
+      </div>
+
       <SectionTitle title="Featured near popular schools" subtitle="Tap a card to view details" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
