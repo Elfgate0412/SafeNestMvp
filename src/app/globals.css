@@ -1,1 +1,5 @@
-@import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
+
+/* your globals */
+html, body { height: 100%; }

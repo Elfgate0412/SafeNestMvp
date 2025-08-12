@@ -16,6 +16,7 @@ export default function HomePage() {
             Built for international students. Hosts verified. Pricing transparent.
           </p>
 
+          {/* Search bar */}
           <div className="mt-6 bg-white rounded-2xl p-2 flex flex-col md:flex-row gap-2 md:items-center shadow-soft">
             <input
               className="flex-1 border border-brand-50 rounded-xl px-3 py-3 text-sm outline-brand-600"
@@ -47,18 +48,37 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div className="grid gap-3 sm:grid-cols-3">
+        <a href="/host/register" className="rounded-xl border bg-white p-4 text-center hover:shadow-soft transition">
+          <div className="font-semibold">Become a host</div>
+          <div className="text-sm text-gray-600">Apply to host; upload documents</div>
+        </a>
+        <a href="/host/dashboard" className="rounded-xl border bg-white p-4 text-center hover:shadow-soft transition">
+          <div className="font-semibold">I’m a host</div>
+          <div className="text-sm text-gray-600">Dashboard, listings, status</div>
+        </a>
+        <a href="/student/dashboard" className="rounded-xl border bg-white p-4 text-center hover:shadow-soft transition">
+          <div className="font-semibold">I’m a student</div>
+          <div className="text-sm text-gray-600">(Placeholder) Student dashboard</div>
+        </a>
+      </div>
+
       <SectionTitle title="Featured near popular schools" subtitle="Tap a card to view details" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {mockListings.slice(0, 6).map((l) => (
           <Link key={l.id} href={`/listing/${l.id}`} className="rounded-2xl border hover:shadow-sm transition block bg-white">
-            <div className="aspect-[4/3] bg-gray-100 rounded-t-2xl grid place-items-center text-gray-500">Image</div>
+            <div className="aspect-[4/3] bg-gray-100 rounded-t-2xl grid place-items-center text-gray-500">
+              Image
+            </div>
             <div className="p-4">
               <div className="flex items-center justify-between">
                 <p className="font-medium">{l.title}</p>
                 <p className="font-semibold">${l.price}/wk</p>
               </div>
-              <p className="text-sm text-gray-600">{l.suburb} • {l.schoolShort}</p>
+              <p className="text-sm text-gray-600">
+                {l.suburb} • {l.schoolShort}
+              </p>
             </div>
           </Link>
         ))}
